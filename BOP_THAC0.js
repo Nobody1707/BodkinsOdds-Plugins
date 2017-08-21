@@ -3,7 +3,7 @@
 // BOP_THAC0.js
 //=============================================================================
 var Imported = Imported || {};
-Imported.BOP_THAC0 = "0.1.0";
+Imported.BOP_THAC0 = "0.1.1";
 
 /*:
  * @plugindesc Plugin to implement AD&D style to hit rolls using low AC and THAC0.
@@ -84,17 +84,17 @@ Imported.BOP_THAC0 = "0.1.0";
 (function() {
  "use strict";
  function boolFrom(parameter, defaultValue) {
- const string = String(parameter);
- const boolExpr = /\s*(true|false)\s*/i
- const match = string.match(boolExpr);
- return match ? match[1].toLowerCase() === "true" : defaultValue;
+     const string = String(parameter);
+     const boolExpr = /\s*(true|false)\s*/i
+     const match = string.match(boolExpr);
+     return match ? match[1].toLowerCase() === "true" : defaultValue;
  }
  
  function numberFrom(parameter, defaultValue) {
- const string = String(parameter);
- const numberExpr = /\s*[+-]?\d+\s*/
- const match = string.match(numberExpr);
- return match ? Number(match[1]) : defaultValue;
+     const string = String(parameter);
+     const numberExpr = /\s*[+-]?\d+\s*/
+     const match = string.match(numberExpr);
+     return match ? Number(match[1]) : defaultValue;
  }
  
  let parameters = PluginManager.parameters("BOP_THAC0");
